@@ -1,10 +1,11 @@
 var React = require('react');
-var {connect} =  require('react-redux');
+var {connect} = require('react-redux');
 var actions = require('actions');
 
 export var TodoSearch = React.createClass({
-  render: function() {
+  render: function () {
     var {dispatch, showCompleted, searchText} = this.props;
+
     return (
       <div className="container__header">
         <div>
@@ -19,10 +20,10 @@ export var TodoSearch = React.createClass({
                 dispatch(actions.toggleShowCompleted());
               }}/>
             Show completed todos
-        </label>
+          </label>
         </div>
       </div>
-    );
+    )
   }
 });
 
@@ -31,6 +32,6 @@ export default connect(
     return {
       showCompleted: state.showCompleted,
       searchText: state.searchText
-    };
+    }
   }
 )(TodoSearch);
