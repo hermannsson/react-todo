@@ -10,8 +10,6 @@ import {TodoApp} from 'TodoApp';
 // var TodoList = require('TodoList');
 import TodoList from 'TodoList';
 
-var TodoApp = require('TodoApp');
-
 describe('TodoApp', () => {
   it('should exist', () => {
     expect(TodoApp).toExist();
